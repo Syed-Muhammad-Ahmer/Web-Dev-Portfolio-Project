@@ -1,0 +1,58 @@
+Custom CSS for animations and transitions
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; 
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+
+
+.profile-pic {
+    width: 250px;
+    height: 250px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid #000000; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.profile-pic:hover {
+    transform: scale(1.1) rotate(10deg); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Responsive adjustments */
+@media (max-width: 425px) {
+    .profile-pic {
+        width: 150px; 
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 2rem; 
+    }
+
+    .lead {
+        font-size: 1rem; 
+    }
+}
